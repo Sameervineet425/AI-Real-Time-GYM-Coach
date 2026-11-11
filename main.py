@@ -100,7 +100,7 @@ def main():
     initialize_voice_pipeline()
     workout_started = st.session_state.get("workout_started", False)
     with st.sidebar:
-        st.title("🏋️‍♂️ Apna AI Coach")
+        st.title("🏋️‍♂️ Sameer's AI Coach")
         username = st.session_state.get("username")
         if username:
             st.caption(f"👤 Login as {username}")

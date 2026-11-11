@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Real-time Gym Coach — Form feedback that talks back</title>
+    <meta
+      name="description"
+      content="Real-time pose detection and proactive AI voice coaching for squats, push-ups, curls, shoulder presses and lunges — right from your webcam."
+    />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top">
+        <img src="/icon.png" alt="" width="28" height="28" />
+        <span>Sameer's AI Coach</span>
+      </a>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#exercises">Exercises</a>
+        <a class="btn btn-small" data-app-link href="https://ai--coach.streamlit.app/" target="_blank" rel="noopener">Launch app</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Live pose tracking · AI voice coach</p>
+          <h1>Your webcam is now<br /><em>a personal trainer.</em></h1>
+          <p class="lede">
+            AI Real-time Gym Coach watches your form through the camera, counts every rep, and
+            speaks up the moment your knees cave or your back arches — so you fix it mid-set, not
+            after.
+          </p>
+          <div class="cta-row">
+            <a class="btn" data-app-link href="https://ai--coach.streamlit.app/" target="_blank" rel="noopener">Start a workout →</a>
+            <a class="btn btn-ghost" href="https://github.com/Sameervineet425/AI-Real-Time-GYM-Coach" target="_blank" rel="noopener">View source</a>
+          </div>
+        </div>
+
+        <div class="hud" aria-hidden="true">
+          <svg viewBox="0 0 200 260" class="skeleton">
+            <g class="bones">
+              <line x1="80" y1="70" x2="120" y2="70" />
+              <line x1="80" y1="70" x2="62" y2="108" />
+              <line x1="62" y1="108" x2="72" y2="142" />
+              <line x1="120" y1="70" x2="138" y2="108" />
+              <line x1="138" y1="108" x2="128" y2="142" />
+              <line x1="80" y1="70" x2="84" y2="140" />
+              <line x1="120" y1="70" x2="116" y2="140" />
+              <line x1="84" y1="140" x2="116" y2="140" />
+              <line x1="84" y1="140" x2="58" y2="178" />
+              <line x1="58" y1="178" x2="72" y2="228" />
+              <line x1="116" y1="140" x2="142" y2="178" />
+              <line x1="142" y1="178" x2="128" y2="228" />
+            </g>
+            <circle class="head" cx="100" cy="44" r="16" />
+            <g class="joints">
+              <circle cx="80" cy="70" r="4" /><circle cx="120" cy="70" r="4" />
+              <circle cx="62" cy="108" r="4" /><circle cx="138" cy="108" r="4" />
+              <circle cx="72" cy="142" r="4" /><circle cx="128" cy="142" r="4" />
+              <circle cx="84" cy="140" r="4" /><circle cx="116" cy="140" r="4" />
+              <circle class="hot" cx="58" cy="178" r="5" /><circle class="hot" cx="142" cy="178" r="5" />
+              <circle cx="72" cy="228" r="4" /><circle cx="128" cy="228" r="4" />
+            </g>
+          </svg>
+          <div class="readout r1"><span>KNEE ANGLE</span><strong id="knee">92°</strong></div>
+          <div class="readout r2"><span>REPS</span><strong id="reps">07</strong></div>
+          <div class="readout r3"><span>DEPTH</span><strong class="ok">GOOD</strong></div>
+          <div class="speech">“Nice depth — keep your chest up on the way out.”</div>
+        </div>
+      </section>
+
+      <section id="how" class="steps">
+        <h2>Three systems, one coach</h2>
+        <div class="grid">
+          <article>
+            <span class="num">01</span>
+            <h3>See</h3>
+            <p>MediaPipe pose landmarks are tracked frame-by-frame from a WebRTC camera stream, mapping 33 body points in real time.</p>
+          </article>
+          <article>
+            <span class="num">02</span>
+            <h3>Measure</h3>
+            <p>Exercise-specific detectors compute joint angles, alignment and depth to count clean reps and flag form breakdowns.</p>
+          </article>
+          <article>
+            <span class="num">03</span>
+            <h3>Speak</h3>
+            <p>An LLM turns live metrics into short, proactive cues, delivered out loud with text-to-speech while you train.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="exercises" class="exercises">
+        <h2>What it tracks</h2>
+        <ul>
+          <li><strong>Squats</strong><span>Knee angle · back angle · depth</span></li>
+          <li><strong>Push-ups</strong><span>Elbow angle · body line · hip sag</span></li>
+          <li><strong>Biceps Curls</strong><span>Elbow angle · shoulder drift · swing</span></li>
+          <li><strong>Shoulder Press</strong><span>Lockout · shoulder angle · back arch</span></li>
+          <li><strong>Lunges</strong><span>Front &amp; back knee · torso upright</span></li>
+        </ul>
+      </section>
+
+      <section class="final">
+        <h2>Ready for your next set?</h2>
+        <p>Sign in, pick an exercise, allow camera access, and train. Your workout history is saved for every session.</p>
+        <a class="btn" data-app-link href="https://ai--coach.streamlit.app/" target="_blank" rel="noopener">Launch the coach →</a>
+      </section>
+    </main>
+
+    <footer>
+      <span>AI Real-time Gym Coach</span>
+      <span>Built with Streamlit · MediaPipe · Groq</span>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

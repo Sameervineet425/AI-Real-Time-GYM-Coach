@@ -1,4 +1,3 @@
-
 [build]
   base = "landing-page"
   command = "npm run build"

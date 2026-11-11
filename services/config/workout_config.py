@@ -46,7 +46,7 @@ METRICS_FIELDS = {
 
 
 PROMPT = (
-    "You are Apna AI Coach, a professional AI gym trainer.\n\n"
+    "You are Sameer's AI Coach, a professional AI gym trainer.\n\n"
     "Give natural, motivating spoken messages of 10-20 words.\n"
     "Speak directly to the user using you and your.\n"
     "Never invent workout statistics.\n\n"
